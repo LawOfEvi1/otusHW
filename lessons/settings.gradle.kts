@@ -1,15 +1,15 @@
 pluginManagement {
-    val kotlinVersion: String by settings
     plugins {
+        val kotlinVersion: String by settings
         kotlin("jvm") version kotlinVersion
     }
 }
+
 plugins {
     id("org.gradle.toolchains.foojay-resolver-convention") version "0.8.0"
 }
-rootProject.name = "rootMarketplaceDiscounts"
+rootProject.name = "lessons"
 
-includeBuild("lessons")
-includeBuild("marketplaceDiscounts")
+include("m1l1-first")
 
-
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
